@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Just for fun</title>
+</head>
+<body>
+	<section>
+	<div>
+	<canvas id="canvas" width="300" height="300">
+		This text is displayed if your browser does not support HTML5 Canvas.
+	</canvas>
+	</div>
+
+	<script>
+	var canvas;
+	var ctx;
+	var rh = 10;
+	var rw = 10;
+	var dx = 5;
+	var dy = 5;
+	var x = 150;
+	var y = 150;
+	var x2 = 150;
+	var y2 = 150;
+	var WIDTH = 300;
+	var HEIGHT = 300;
+	
+	function player(y, x, w, h){
+		ctx.beginPath();
+		ctx.rect(y, x, rw, rh);
+		ctx.closePath();
+		ctx.fill();
+		ctx.stroke();
+	}
+	function rect(y, x, w, h){
+		ctx.beginPath();
+		ctx.rect(y, x,w,h);
+		ctx.closePath();
+		ctx.fill();
+		ctx.stroke();
+	}
+	
+	function player2(y2, x2, w, h){
+		ctx.beginPath();
+		ctx.rect(y2, x2, rw, rh);
+		ctx.closePath();
+		ctx.fill();
+		ctx.stroke();
+	}
+	
+	function player3(y, x, w, h){
+		ctx.beginPath();
+		ctx.rect(x, y, rw, rh);
+		ctx.closePath();
+		ctx.fill();
+		ctx.stroke();
+	}
+	
+	function player4 (y2, x2, rw, rh){
+		ctx.beginPath();
+		ctx.rect(x2, y2, rw, rh);
+		ctx.closePath();
+		ctx.fill();
+		ctx.stroke();
+	}
+	
+	function clear() {
+		ctx.clearRect(0, 0, WIDTH, HEIGHT);
+	}
+	function init() {
+		canvas = document.getElementById("canvas");
+		ctx = canvas.getContext("2d");
+		return setInterval(draw, 10);
+	}
+	
+	function doKeyDown(evt){
+		switch (evt.keyCode) {
+			case 38:  /* Up arrow was pressed */
+				if (y - dy > 0){
+					y -= dy;
+					y2 += dy;
+				}
+			break;
+			case 40:  /* Down arrow was pressed */
+				if (y + dy < HEIGHT){
+					y += dy;
+					y2 -= dy;
+				}
+			break;
+			case 37:  /* Left arrow was pressed */
+				if (x - dx > 0){
+					x -= dx;
+					x2 += dx;
+			}
+			break;
+			case 39:  /* Right arrow was pressed */
+			if (x + dx < WIDTH){
+				x += dx;
+				x2 -= dx;
+			}
+			break;
+		}
+	}
+
+	function draw() {
+		clear();
+		ctx.fillStyle = "white";
+		ctx.strokeStyle = "black";
+		rect(0,0,WIDTH,HEIGHT);
+		ctx.fillStyle = "yellow";
+		player(x,y,rh,rw);
+		ctx.fillStyle = "red";
+		player2(x2,y2,rh,rw);
+		ctx.fillStyle = "green";
+		player3(x,y,rh,rw);
+		ctx.fillStyle = "blue";
+		player4(x2,y2,rh,rw);
+	}
+	init();
+	window.addEventListener('keydown',doKeyDown,true);
+	</script>
+	</section>
+</body>
+</html>
