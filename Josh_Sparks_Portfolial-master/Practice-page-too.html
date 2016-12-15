@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Practice site too</title>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]--> 
+		<link rel="stylesheet" type="text/css" href="Style-2.css">
+        <script>
+			function startTime() {
+				var today = new Date();
+				var h = today.getHours();
+				
+				if (h>12) {
+					h = h-12;
+				}
+				
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+				
+				document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+				var time = setTimeout(startTime,1000);
+			}
+			
+			function checkTime(i) {
+				if (i<10) {
+					i = "0" + i;
+				}
+				return i;
+			}
+			
+			function changeColor(i) {
+				document.getElementById(i).style.color = "white";
+				document.getElementById(i).style.backgroundColor = "black";
+				document.getElementById(i).style.fontFamily = "comic sans";
+			}
+			
+			function gemTheMovie() {
+				alert("The Jem movie sucks");
+			}		
+		</script>
+	</head>
+   <body onLoad="startTime()">
+    	<main >
+    		<header id="Lucina" onClick="hiLucina()">
+            	<h1>
+                	Cool Ice Productions
+                </h1>
+            </header>
+        	<nav>
+            	<ul>
+                	<li>
+                    <a href="#">Home</a></li><li>
+                    <a href="#">About</a></li><li>
+                    <a href="#">Stories</a></li><li>
+                    <a href="#">Contact Us</a></li>
+           		</ul>
+            </nav>
+        	<section>
+           		  <h2> Blarg </h2> 
+                
+            </section>
+            
+        	<article id="art1">
+        	    <img src="images/Diamond.png" width="80" height="80" alt="Diamond" id="gem"/><h2>Get Dunked</h2> Your gonna have a bad time. Your gonna have a bad time. Your gonna have a bad time. Your gonna have a bad time. Your gonna have a bad time. Your gonna have a bad time. Your gonna have a bad time. Your gonna have a bad time.
+               <br/>
+        	<input type="button" value="Change Color" onClick="changeColor('art1')"></article>
+            
+        	<aside id="clock">
+            </aside>
+            
+        	<footer id="info" onClick="infoReport()">copyright</footer>
+            <script>
+				function infoReport() {
+					var b = navigator.appVersion + navigator.appVersion;
+					b += "\n" + navigator.geolocation;
+					document.getElementById("info").innerHTML = b;
+				}
+				
+				function showPosition(position) {
+					document.getElementById("info").innerHTML = position.coords.latitude;
+				}
+			</script>
+		</main>
+        <script>
+			document.getElementById('gem').addEventListener('mouseover',gemTheMovie);
+		</script>
+    </body>
+</html>

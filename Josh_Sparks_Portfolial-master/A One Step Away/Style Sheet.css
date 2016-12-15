@@ -1,0 +1,219 @@
+@charset "utf-8";
+/*main*/
+body, ul, li, main, nav, a, header, h1
+{
+	margin:0;
+	padding:0;
+}
+main 
+{
+	width:1000px;
+	margin:auto;
+	background-color:#25705A;
+}
+/*header*/
+header{
+	background-color:black;
+	height:120px;
+	background-image:url(file://///ARIES/Students/2018/joshua.sparks/Documents/Sophmore/D%20and%20D/Web%20folder/images/rocky2.jpg);
+}
+header h1
+{
+	color:#826621;
+	text-align:center;
+	font-family: 'Aclonica', sans-serif;
+	font-size:4em;
+	padding-top:15px;
+}
+/*body*/
+body 
+{
+background-image: url(images/forest2.jpg);
+}
+
+/*nav*/
+nav 
+{
+	background-color:#AA7239;
+	border-top:solid #FFFFFF;
+}
+li
+{
+	display:inline-block;
+	width:163px;
+	text-align:center;
+}
+li:hover
+{
+	background-color:#605438;
+}
+a:link
+{
+	color:#24C7C4;
+	text-decoration:none;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+}
+body, ul, li
+{
+	margin:0;
+	padding:0;
+}
+nav a
+{
+	display:block;
+	height:30px;
+	padding-top:5px;
+}
+a:visited
+{
+	color:#2222F3;
+}
+/*body*/
+.heading
+{
+	text-align:center;
+}
+	/*section*/
+section
+{
+	background-color:#AA6039;
+	width:990px;
+	float:right;
+	padding:0 5px 2px 5px;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	line-height:30px;
+	align-content:center;
+}
+section, p
+{
+	font-size:18px;
+	text-align:center;
+}
+.RentalTubes
+{
+	font-size:14px;
+	line-height:8px;
+	padding:0 0 0 150px;
+}
+.returnTime
+{
+	line-height:11px;
+}
+	/*article*/
+article
+{
+	background-color:#25705A;
+	width:740px;
+	float:right;
+	padding:0 5px 2px 5px;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	line-height:30px;
+	align-content:center;
+}
+.InnerTube
+{
+	float:left;
+}
+.checkOutTime
+{
+	align-content:center;
+	width:200px;
+	padding:0 0 0 280px;
+	
+}
+	/*aside*/
+aside
+{
+	background-color:#265B6A;
+	width:240px;
+	float:left;
+	padding:0 5px 2px 5px;
+	line-height:30px;
+	align-content:center;
+	align-self:baseline;
+}
+aside p
+{
+	line-height:20px;
+	font-size:14px;
+	border-top:solid 2px black;
+}
+/*Footer*/
+footer
+{
+	background-color:#625A3B;
+	clear:both;
+}
+.contactInfo
+{
+	width:754px;
+	height:66px;
+	border-right:solid 1px #000000;
+	float:left;
+	background-color:#625A3B;
+	font-size:9px;
+}
+.extraInfo
+{
+	font-size:8px;
+	float:right;
+	width:245px;
+	background-color:#625A3B;
+	height:60px;
+}
+/*History*/
+.History
+{
+	text-align:left;
+	font-size:16px;
+}
+/*pictures*/
+.Img
+{
+	width:243px;
+	margin:0px;
+	padding:0px;
+}
+/*accomodations*/
+.rooms
+{
+	width:450px;
+	padding: 5px 20px 5px 20px;
+	height:150px;
+	border:solid 1px #000000;
+	background-color:#25705A;
+}
+.room
+{
+	text-align:left;
+}
+.titles
+{
+	text-decoration:underline;
+	padding: 0px 20px 0px 20px;
+}
+/*Special Sales items*/
+.Price
+{
+	line-height:5px;
+}
+.section
+{
+	background-color:#25705A;
+}
+/*contact page*/
+.input{
+	margin:0 0 10px 20px;
+	width:200px;
+}
+label {
+	float:left;
+	width:200px;
+}
+
+input:required:invalid {
+	border:#FF0004 3px solid;
+}
+.extra {
+	display:none;
+}

@@ -1,0 +1,148 @@
+@charset "utf-8";
+/*CSS*/
+/*Main*/
+main{
+	background-color:#00B3FF;
+	min-height:1000px;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+p, h1, h2, li
+{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+/*Header*/
+header{
+	width:900px;
+	margin:auto;
+	background-color:#323232;
+	height:100px;
+}
+header h1{
+	text-align:center;
+	color:#00B3FF;
+	padding:30px;
+	font-size:48px;
+}
+img{
+	width:50px;
+	height:50px;
+	display:block;
+	float:right;
+}
+
+/*Navagation Section*/
+nav
+{
+	width:900px;
+	margin:auto;
+}
+
+nav ul {
+	list-style:none;
+	position:absolute;
+	background-color:#505050;
+}
+
+nav li
+{
+	display:inline-block;
+	width:178px;
+	text-align:center;
+	border:#000000 solid 1px;
+}
+
+nav ul ul {
+	display:none;
+	position:absolute;
+	Top:100%;
+	width:180px;
+}
+
+nav ul li:hover > ul{
+	display:block;
+}
+
+nav a {
+	text-decoration:none;
+	display:block;
+}
+
+nav a:hover {
+	color:#15CDD0;
+}
+
+nav ul ul li {
+	position:relative;
+}
+a:visted {
+	color:#363636;
+}
+a {
+	color:#000000;
+}
+/*Secotion*/
+section{
+	background:#727272;
+	width:900px;
+	margin:auto;
+	padding-top:30px;
+}
+p, h1{
+	padding:5px;
+}
+.Title{
+	text-align:center;
+}
+video{
+	height:250px;
+	width:450px;
+	display:inline-block;
+}
+/*footer*/
+
+footer{
+	background-color:#1F1F1F;
+	width:900px;
+	margin:auto;
+	height:50px;
+}
+footer p{
+	color:#676767;
+	float:left;
+	padding:15px;
+}
+/*contact form*/
+
+.input{
+	margin:0 0 10px 30px;
+	width:200px;
+}
+label {
+	float:left;
+	width:200px;
+}
+
+input:required:invalid {
+	border:#FF0004 3px solid;
+}
+.extra {
+	display:none;
+}
